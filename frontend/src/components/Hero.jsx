@@ -7,9 +7,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
 
       {/* Decorative floating robot — background accent */}
-      {/* Decorative floating robot — background accent */}
       <div
-        className="pointer-events-none select-none absolute bottom-4 right-8 opacity-40 text-[13rem] leading-none"
+        className="pointer-events-none select-none absolute bottom-4 right-4 sm:right-8 opacity-30 text-[7rem] sm:text-[10rem] md:text-[13rem] leading-none overflow-hidden"
         style={{
           animation: 'floatRobot 5s ease-in-out infinite',
           filter: 'sepia(1) saturate(8) hue-rotate(195deg) brightness(0.55)'
@@ -25,7 +24,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-700 mb-6">
@@ -61,11 +60,11 @@ export default function Hero() {
 
             {/* Logo card */}
             <div className="relative z-10 flex flex-col items-center gap-6">
-              <div className="rounded-3xl bg-white shadow-2xl shadow-primary-900/15 border border-slate-100 p-8 flex items-center justify-center" style={{ width: 280, height: 280 }}>
+              <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-white shadow-2xl shadow-primary-900/15 border border-slate-100 p-6 sm:p-8 flex items-center justify-center">
                 <img
                   src="/logo.jpg"
                   alt="STEM Quest Learning Lab Logo"
-                  className="w-56 h-56 object-contain rounded-2xl"
+                  className="w-full h-full object-contain rounded-2xl"
                 />
               </div>
               <div className="text-center">

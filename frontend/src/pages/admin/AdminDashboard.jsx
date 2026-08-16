@@ -154,18 +154,18 @@ export default function AdminDashboard() {
   ]
 
   return (
-    <div className="min-h-screen bg-slate-50 flex">
+    <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row">
       {/* Sidebar */}
-      <div className="w-64 bg-slate-900 text-white flex flex-col">
+      <div className="w-full md:w-64 bg-slate-900 text-white flex flex-col shrink-0">
         <div className="p-6 border-b border-slate-800">
           <h2 className="text-xl font-bold font-display">Teacher Portal</h2>
         </div>
-        <nav className="flex-1 p-4 space-y-2">
+        <nav className="flex-1 p-4 space-y-2 flex flex-wrap md:flex-col gap-1">
           {tabs.map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition ${activeTab === tab.id ? 'bg-primary-600 text-white' : 'text-slate-400 hover:bg-slate-800 hover:text-white'}`}
+              className={`flex-1 md:flex-none flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition ${activeTab === tab.id ? 'bg-primary-600 text-white' : 'text-slate-400 hover:bg-slate-800 hover:text-white'}`}
             >
               <tab.icon className="h-5 w-5" />
               {tab.label}
@@ -181,13 +181,13 @@ export default function AdminDashboard() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 overflow-auto p-8">
+      <div className="flex-1 overflow-auto p-4 sm:p-8">
         <div className="max-w-5xl mx-auto">
           
           {activeTab === 'enrollments' && (
             <div className="space-y-6">
               <h1 className="text-2xl font-bold">Enrollment Applications</h1>
-              <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+              <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-x-auto">
                 <table className="min-w-full divide-y divide-slate-200">
                   <thead className="bg-slate-50">
                     <tr>
@@ -202,7 +202,7 @@ export default function AdminDashboard() {
                     {data.enrollments.map((e, i) => (
                       <tr key={i}>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-900">{e.learnerName} (Gr {e.learnerGrade})</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">{e.parentName}<br/><span className="text-xs text-slate-400">{e.parentEmail}</span></td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">{e.parentName}<br/><span className="text-xs text-slate-400">{e.parentEmail} • {e.parentPhone}</span></td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">{e.programme} - {e.packageInterest}</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm">
                           <span className={`px-2 py-1 rounded-full text-xs font-bold ${e.status === 'approved' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
@@ -226,8 +226,8 @@ export default function AdminDashboard() {
 
           {activeTab === 'payments' && (
             <div className="space-y-6">
-              <h1 className="text-2xl font-bold">Payments Verification</h1>
-              <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+              <h1 className="text-2xl font-bold">Verify Parent Payments</h1>
+              <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-x-auto">
                 <table className="min-w-full divide-y divide-slate-200">
                   <thead className="bg-slate-50">
                     <tr>
@@ -281,7 +281,7 @@ export default function AdminDashboard() {
           {activeTab === 'users' && (
             <div className="space-y-8">
               <h1 className="text-2xl font-bold">Manage Users</h1>
-              <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+              <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-x-auto">
                 <table className="min-w-full divide-y divide-slate-200">
                   <thead className="bg-slate-50">
                     <tr>

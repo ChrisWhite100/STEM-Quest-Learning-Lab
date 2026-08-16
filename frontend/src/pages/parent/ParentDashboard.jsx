@@ -299,7 +299,7 @@ export default function ParentDashboard() {
                     No payment history found.
                   </div>
                 ) : (
-                  <div className="overflow-hidden">
+                  <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-slate-200">
                       <thead>
                         <tr>
