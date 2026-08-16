@@ -1,0 +1,20 @@
+[
+  {
+    "phase": "Foundation Phase",
+    "tools": "Code & Go Mouse, Unplugged Activities",
+    "skills": "Sequencing, logical thinking",
+    "extras": "Project help, parental engagement"
+  },
+  {
+    "phase": "Intermediate Phase",
+    "tools": "Scratch Jr, Scratch 3, FLL Explore",
+    "skills": "Algorithms, loops, robotics design",
+    "extras": "School showcase events"
+  },
+  {
+    "phase": "Senior Phase",
+    "tools": "Arduino, Python, FLL Challenge",
+    "skills": "Electronics, programming, real-world problem solving",
+    "extras": "Physics & Life Science integration"
+  }
+]

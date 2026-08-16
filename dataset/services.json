@@ -1,0 +1,22 @@
+[
+  {
+    "id": "school-partnerships",
+    "title": "School Partnerships",
+    "description": "Embedded, timetable-integrated STEM delivery across multiple grades under a monthly retainer contract."
+  },
+  {
+    "id": "robotics-clubs",
+    "title": "After-School Robotics Clubs",
+    "description": "Structured co-curricular programme for learners seeking deeper engagement in coding and robotics."
+  },
+  {
+    "id": "teacher-training",
+    "title": "Teacher Training Workshops",
+    "description": "Equipping educators with the pedagogical tools and confidence to sustain STEM delivery independently."
+  },
+  {
+    "id": "holiday-bootcamps",
+    "title": "Holiday Bootcamps",
+    "description": "Intensive innovation and coding camps during school holidays — project-based learning with tangible outcomes."
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "fcb34613-1d47-44a6-874f-474acacc10e9",
+    "type": "enrollment",
+    "parentName": "Matiti Dlamini",
+    "parentEmail": "matiti@gmail.com",
+    "parentPhone": "76452740",
+    "learnerName": "Mbalenhle Magaya",
+    "learnerGrade": "5",
+    "programme": "robotics-club",
+    "packageInterest": "",
+    "notes": "",
+    "createdAt": "2026-08-12T12:11:20.532Z"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "5efdadc7-c57e-4fab-a9c0-e9a986e878fe",
+    "email": "admin@stemquest.com",
+    "password": "$2b$10$Ox8lYmtkmLpr2LCIeqpTi.poWdk0rcbCfOIZulFRKUo.DOMAH3aKq",
+    "role": "admin",
+    "name": "Admin",
+    "createdAt": "2026-08-12T12:21:50.865Z"
+  },
+  {
+    "id": "bccf7fce-a6a2-45e2-9c8a-5c6bcc5dee01",
+    "email": "learner@stemquest.com",
+    "password": "$2b$10$HNgXRWR9wuOZqUkRv/8hVOxr32/Zqo64efhMvJjiurDrBuYqNo6Em",
+    "role": "student",
+    "name": "Demo Learner",
+    "createdAt": "2026-08-12T13:20:02.442Z"
+  },
+  {
+    "id": "d741008e-aeb1-4c33-9fe8-1a8f5581cd77",
+    "email": "parent@stemquest.com",
+    "password": "$2b$10$HNgXRWR9wuOZqUkRv/8hVO3v/TQwKFyiokhTrqsO3vSRe5qpnjMay",
+    "role": "parent",
+    "name": "Demo Parent",
+    "studentEmail": "learner@stemquest.com",
+    "createdAt": "2026-08-12T13:20:02.611Z"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "caption": "Educators exploring basic robotics concepts",
+    "filename": "media__1786618591901.jpg",
+    "originalName": "media__1786618591901.jpg",
+    "mimetype": "image/jpeg",
+    "type": "image",
+    "size": 102400,
+    "url": "/uploads/media__1786618591901.jpg",
+    "createdAt": "2026-08-13T11:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "caption": "Hands-on coding with block programming",
+    "filename": "media__1786618591929.jpg",
+    "originalName": "media__1786618591929.jpg",
+    "mimetype": "image/jpeg",
+    "type": "image",
+    "size": 102400,
+    "url": "/uploads/media__1786618591929.jpg",
+    "createdAt": "2026-08-13T11:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "caption": "Learners engaging in interactive problem solving",
+    "filename": "media__1786618591964.jpg",
+    "originalName": "media__1786618591964.jpg",
+    "mimetype": "image/jpeg",
+    "type": "image",
+    "size": 102400,
+    "url": "/uploads/media__1786618591964.jpg",
+    "createdAt": "2026-08-13T11:00:00.000Z"
+  }
+]

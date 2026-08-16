@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bronze",
+    "name": "Bronze Package",
+    "monthlyFee": 12000,
+    "currency": "E",
+    "sessionsPerWeek": 4,
+    "gradesCovered": "Up to 2 grades",
+    "teacherTraining": false,
+    "roboticsClub": false,
+    "assessment": "Termly report",
+    "popular": false
+  },
+  {
+    "id": "silver",
+    "name": "Silver Package",
+    "monthlyFee": 18000,
+    "currency": "E",
+    "sessionsPerWeek": 6,
+    "gradesCovered": "3–4 grades",
+    "teacherTraining": "Monthly support",
+    "roboticsClub": false,
+    "assessment": "Termly report",
+    "popular": true
+  },
+  {
+    "id": "gold",
+    "name": "Gold Package",
+    "monthlyFee": 25000,
+    "currency": "E",
+    "sessionsPerWeek": 8,
+    "gradesCovered": "Full intermediate phase",
+    "teacherTraining": "Included",
+    "roboticsClub": true,
+    "assessment": "Full portfolio + showcase",
+    "popular": false
+  }
+]
