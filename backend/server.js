@@ -114,9 +114,28 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage })
 
-app.use(cors())
+// CORS: allow local dev + deployed frontend
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.FRONTEND_URL
+].filter(Boolean)
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (e.g. curl, Render health checks)
+    if (!origin || allowedOrigins.includes(origin)) return callback(null, true)
+    callback(new Error('Not allowed by CORS'))
+  },
+  credentials: true
+}))
 app.use(express.json())
 app.use('/uploads', express.static(UPLOADS_DIR))
+
+// Serve built React frontend in production
+const FRONTEND_DIST = path.join(__dirname, '..', 'frontend', 'dist')
+if (process.env.NODE_ENV === 'production' && fs.existsSync(FRONTEND_DIST)) {
+  app.use(express.static(FRONTEND_DIST))
+}
 
 // Health
 app.get('/api/health', (_req, res) => {
@@ -482,6 +501,19 @@ app.get('/api/data/packages', (_req, res) => res.json(require('./data/packages.j
 app.get('/api/data/services', (_req, res) => res.json(require('./data/services.json')))
 app.get('/api/data/curriculum', (_req, res) => res.json(require('./data/curriculum.json')))
 app.get('/api/data/team', (_req, res) => res.json(require('./data/team.json')))
+
+// Catch-all: serve React app for any non-API route in production
+if (process.env.NODE_ENV === 'production') {
+  const FRONTEND_DIST = path.join(__dirname, '..', 'frontend', 'dist')
+  app.get('*', (req, res) => {
+    const indexPath = path.join(FRONTEND_DIST, 'index.html')
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath)
+    } else {
+      res.status(404).json({ error: 'Frontend not built. Run: cd frontend && npm run build' })
+    }
+  })
+}
 
 // Start server
 sequelize.sync().then(async () => {

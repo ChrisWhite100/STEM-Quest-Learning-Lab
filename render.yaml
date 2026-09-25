@@ -1,0 +1,21 @@
+services:
+  # ─── Unified Web Service: Backend API + React Frontend ─────────────────────
+  # The Node.js server builds the React app and serves it as static files.
+  # Your free public URL will be: https://stemquest.onrender.com
+  - type: web
+    name: stemquest
+    runtime: node
+    rootDir: .
+    # Build both frontend and backend
+    buildCommand: cd frontend && npm install && npm run build && cd ../backend && npm install
+    startCommand: node backend/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+      # ── Optional Email (add via Render Dashboard > Environment) ──────────────
+      # SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, FROM_EMAIL
+    plan: free

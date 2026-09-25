@@ -20,6 +20,10 @@ npm-debug.log*
 *.sqlite3
 backend/data/*.sqlite
 
+# Keep uploads directory structure for deployment
+backend/uploads/*
+!backend/uploads/.gitkeep
+
 # OS & Editor metadata
 .DS_Store
 Thumbs.db
